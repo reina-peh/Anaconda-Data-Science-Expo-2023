@@ -1,7 +1,9 @@
 # Anaconda Data Science Expo 2023
 
 > **Achievement:**  
-> 1st Place Overall (2 rounds of judging by Anaconda from the United States and AI Singapore from Singapore)
+> 1st Place Overall & $7,000 USD
+
+This competition was held in National University of Singapore, where Anaconda from the United States and AI Singapore from Singapore jointly carried out 2 rounds of judging. 
 
 # Overview
 In this competition, I have used jupyter notebook, a web-based computing platform, to code and generate a total of 9 charts. This repository contains my finalized codes for a total of 8 charts that were used in this competition. 
