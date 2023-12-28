@@ -31,7 +31,25 @@ This will install the following libraries along with their dependencies:
 `Scipy`: An open-source Python library used for scientific and technical computing  
 `Numpy`: The fundamental package for scientific computing with Python  
 `Plotly`: An interactive graphing library for Python  
+`Kaleido`: For static image export support with Plotly  
 `Geopandas`: An open-source project that makes working with geospatial data in python easier  
+
+# Challenges
+### 1. Creation of a links structure
+The primary technical challenge in generating the Sankey diagram was creating a structured list of dictionaries that define links between nodes. 
+
+#### Our solution:
+```
+# Extract the matrix data
+matrix_inc = df_inc.iloc[:, 1:].values.tolist()
+names_inc = df_inc.columns[1:].tolist()
+
+# Construct the links DataFrame using list comprehension
+data_inc = [{'source': names_inc.index(name), 'target': names_inc.index(target_name), 'value': matrix_inc[i][j]} 
+            for i, name in enumerate(names_inc) 
+            for j, target_name in enumerate(names_inc) if matrix_inc[i][j] > 0]
+```
+We achieved the desired format by using a list comprehension to iterate over the extracted matrix data, transforming it into a list `data_inc` where each element is a dictionary representing a link between two nodes (countries). The comprehension `for i, name in enumerate(names_inc)` iterates over each country name to establish it as the source node, while a nested loop `for j, target_name in enumerate(names_inc)` determines each target node. The key `'source'` is set to `names_inc.index(name)`, leveraging the `index()` function to translate the country name to its corresponding index in the `names_inc` list. Likewise, the `'target'` key is assigned the index of the target country, and the `'value'` key holds the migration flow from the source to the target extracted from `matrix_inc[i][j]`. In short, this indexing and mapping method converts country names into numerical indices that are used to draw the links between nodes, thereby representing the flow of migrants between different income-level countries.
 
 # Contributors
 * Reina Peh [LinkedIn](https://www.linkedin.com/in/reinapeh/)
