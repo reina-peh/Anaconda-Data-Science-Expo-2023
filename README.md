@@ -38,7 +38,7 @@ This will install the following libraries along with their dependencies:
 ### 1. Creation of a links structure
 The primary technical challenge in generating the Sankey diagram was creating a structured list of dictionaries that define links between nodes. 
 
-#### Solution:
+#### Approach:
 ```
 # Extract the matrix data
 matrix_inc = df_inc.iloc[:, 1:].values.tolist()
@@ -54,7 +54,7 @@ We achieved the desired format by using a list comprehension to iterate over our
 ### 2. Positioning customization of 2-part texts
 In developing polar histogram, we encountered with challenges with positioning the country names and scores as such: `<score> <country>` for the right hemisphere and `<country> <score>` for the left hemisphere of the plot, while also rotating and aligning with the positions of the data points. 
 
-#### Solution:
+#### Approach:
 ```
 # Conditional logic 
 for theta_val, (country, score) in zip(theta_with_10_degree_gap, data_sorted[['country', 'score']].values):
