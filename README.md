@@ -21,7 +21,7 @@ Refer to the `Datasets` folder to download the following datasets:
 # Installation
 To install the required Python libraries/packages in your Jupyter Notebook, run:
 ```
-!pip install pandas matplotlib seaborn scipy numpy plotly geopandas
+!pip install pandas matplotlib seaborn scipy numpy plotly kaleido geopandas
 ```
 This will install the following libraries along with their dependencies:
 
