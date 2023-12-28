@@ -18,15 +18,20 @@ Refer to the `Datasets` folder to download the following datasets:
 * hapiness_report_2022 
 * Regions  
 
-# Python Libraries
-In your Jupyter notebook, run `!pip install <library name>` to install the following libraries:
-* Pandas
-* Matplotlib (Modules: pyplot, offsetbox)
-* Seaborn
-* Scipy (Module: stats)
-* Numpy
-* Plotly (Modules: graph_objects, offline, io)
-* Geopandas
+# Installation
+To install the required Python libraries/packages in your Jupyter Notebook, run:
+```
+!pip install pandas matplotlib seaborn scipy numpy plotly geopandas
+```
+This will install the following libraries along with their dependencies:
+
+`Pandas`: An open-source data analysis and manipulation tool  
+`Matplotlib`: A comprehensive library for creating static, animated, and interactive visualizations in Python   
+`Seaborn`: A statistical data visualization library built on top of matplotlib  
+`Scipy`: An open-source Python library used for scientific and technical computing  
+`Numpy`: The fundamental package for scientific computing with Python  
+`Plotly`: An interactive graphing library for Python  
+`Geopandas`: An open-source project that makes working with geospatial data in python easier  
 
 # Contributors
 * Reina Peh [LinkedIn](https://www.linkedin.com/in/reinapeh/)
