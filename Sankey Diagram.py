@@ -1,6 +1,5 @@
 import plotly.graph_objects as go
 import plotly.offline as pyo
-!pip install kaleido
 import plotly.io as pio
 
 # Load data 
