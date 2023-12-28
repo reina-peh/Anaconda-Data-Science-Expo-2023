@@ -38,7 +38,7 @@ This will install the following libraries along with their dependencies:
 ### 1. Creation of a links structure
 The primary technical challenge in generating the Sankey diagram was creating a structured list of dictionaries that define links between nodes. 
 
-#### Our solution:
+#### Solution:
 ```
 # Extract the matrix data
 matrix_inc = df_inc.iloc[:, 1:].values.tolist()
@@ -49,9 +49,30 @@ data_inc = [{'source': names_inc.index(name), 'target': names_inc.index(target_n
             for i, name in enumerate(names_inc) 
             for j, target_name in enumerate(names_inc) if matrix_inc[i][j] > 0]
 ```
-We achieved the desired format by using a list comprehension to iterate over the extracted matrix data, transforming it into a list `data_inc` where each element is a dictionary representing a link between two nodes (countries). The comprehension `for i, name in enumerate(names_inc)` iterates over each country name to establish it as the source node, while a nested loop `for j, target_name in enumerate(names_inc)` determines each target node. The key `'source'` is set to `names_inc.index(name)`, leveraging the `index()` function to translate the country name to its corresponding index in the `names_inc` list. Likewise, the `'target'` key is assigned the index of the target country, and the `'value'` key holds the migration flow from the source to the target extracted from `matrix_inc[i][j]`. In short, this indexing and mapping method converts country names into numerical indices that are used to draw the links between nodes, thereby representing the flow of migrants between different income-level countries.
+We achieved the desired format by using a list comprehension to iterate over our extracted matrix data, transforming it into a list `data_inc` where each element is a dictionary representing a link between two nodes (countries). The comprehension `for i, name in enumerate(names_inc)` iterates over each country name to establish it as the source node, while a nested loop `for j, target_name in enumerate(names_inc)` determines each target node. The key `'source'` is set to `names_inc.index(name)`, leveraging the `index()` function to translate the country name to its corresponding index in the `names_inc` list. Likewise, the `'target'` key is assigned the index of the target country, and the `'value'` key holds the migration flow from the source to the target extracted from `matrix_inc[i][j]`. In short, this indexing and mapping method converts country names into numerical indices that are used to draw the links between nodes, thereby representing the flow of migrants between different income-level countries.
 
-# Contributors
+### 2. Positioning customization of 2-part texts
+In developing polar histogram, we encountered with challenges with positioning the country names and scores as such: `<score> <country>` for the right hemisphere and `<country> <score>` for the left hemisphere of the plot, while also rotating and aligning with the positions of the data points. 
+
+#### Solution:
+```
+# Conditional logic 
+for theta_val, (country, score) in zip(theta_with_10_degree_gap, data_sorted[['country', 'score']].values):
+    alignment = {}
+    if 0 <= theta_val <= np.pi/2 or 3*np.pi/2 <= theta_val <= 2*np.pi:
+        text_content = f"     ({score:.2f}) {country}"
+    else:
+        text_content = f"{country} ({score:.2f})     "
+    if np.pi/2 < theta_val < 3*np.pi/2:
+        alignment = {"ha": "right", "va": "center"}
+        rotation_deg = theta_val*(180/np.pi) - 180
+    else:
+        alignment = {"ha": "left", "va": "center"}
+        rotation_deg = theta_val*(180/np.pi)
+```
+The code first determines the text content's sequence `text_content` based on the angular position `theta_val` of the data point. For data points in the right hemisphere (0 to π/2 and 3π/2 to 2π radians), the text is formatted as `<score> <country>`. For points in the left hemisphere (π/2 to 3π/2 radians), it's `<country> <score>`. Depending on whether the data point is in the left or right hemisphere, the horizontal alignment `ha` is set to "right" or "left", respectively. This ensures that the text is aligned in a way that it's always outward-facing from the center of the plot, enhancing readability (vertical alignment `va` is consistently set to "center"). The rotation of the text `rotation_deg` is calculated based on `theta_val`, with an adjustment of - 180 degrees when the point is in the left hemisphere. This rotation aligns the text with the radial lines of the plot, ensuring that the text orientation is consistent with the direction of the data points.
+
+# Contributors 
 * Reina Peh [LinkedIn](https://www.linkedin.com/in/reinapeh/)
 * Ryan Tan [LinkedIn](https://www.linkedin.com/in/ryantzr/)
 * Claudia Lai [LinkedIn](https://www.linkedin.com/in/claudialaijy/)
