@@ -3,7 +3,7 @@
 > **Achievement:**  
 > 1st Place Overall & $7,000 USD
 
-This competition was held in National University of Singapore, where Anaconda from the United States and AI Singapore from Singapore jointly carried out 2 rounds of judging. 
+This competition was organized by Anaconda, the world's most popular data science platform. It was held at National University of Singapore (NUS), where both [Anaconda](https://www.anaconda.com/) from the United States and [AI Singapore](https://aisingapore.org/) jointly carried out 2 rounds of judging. 
 
 # Overview
 In this competition, I have used jupyter notebook, a web-based computing platform, to code and generate a total of 9 charts. This repository contains my finalized codes for a total of 8 charts that were used in this competition. 
