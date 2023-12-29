@@ -40,7 +40,7 @@ This will install the following libraries along with their dependencies:
 
 # Challenges We Faced
 ### 1. Creation of a links structure
-The primary technical challenge in generating the Sankey diagram was creating a DataFrame that can then be extracted  used to illustrate the migrant flows between countries structured list of dictionaries that define links between nodes. 
+The `go.Sankey` function consists of 2 parameters `node (dict)` and `link (dict)`. The primary technical challenge in generating the Sankey diagram was constructing the inputs for sub-parameters `source`, `target` and `value` in the `link (dict)` parameter. And the inputs required an advanced DataFrame that function could interpret.
 
 #### Approach:
 ```
@@ -56,7 +56,7 @@ data_inc = [{'source': names_inc.index(name), 'target': names_inc.index(target_n
 We achieved the desired format by using a list comprehension to iterate over our extracted matrix data, transforming it into a list `data_inc` where each element is a dictionary representing a link between two nodes (countries). The comprehension `for i, name in enumerate(names_inc)` iterates over each country name to establish it as the source node, while a nested loop `for j, target_name in enumerate(names_inc)` determines each target node. The key `'source'` is set to `names_inc.index(name)`, leveraging the `index()` function to translate the country name to its corresponding index in the `names_inc` list. Likewise, the `'target'` key is assigned the index of the target country, and the `'value'` key holds the migration flow from the source to the target extracted from `matrix_inc[i][j]`. In short, this indexing and mapping method converts country names into numerical indices that are used to draw the links between nodes, thereby representing the flow of migrants between different income-level countries.
 
 ### 2. Positioning customization of 2-part texts
-In developing polar histogram, we encountered with challenges with positioning the country names and scores as such: `<score> <country>` for the right hemisphere and `<country> <score>` for the left hemisphere of the plot, while also rotating and aligning with the positions of the data points. 
+In developing polar histogram, we encountered with challenges with positioning the country names and scores as such: `<score> <country>` for the right hemisphere and `<country> <score>` for the left hemisphere of the plot, while also aligning and rotating with the positions of the data points. 
 
 #### Approach:
 ```
