@@ -1,14 +1,18 @@
 # Anaconda Data Science Expo 2023
-
 > **Achievement:**  
 > 1st Place Overall & $7,000 USD
 
 This competition was organized by Anaconda, the world's most popular data science platform. It was held at National University of Singapore (NUS), where both [Anaconda](https://www.anaconda.com/) from the United States and [AI Singapore](https://aisingapore.org/) jointly carried out 2 rounds of judging. 
 
-# Overview 
-I have used Jupyter Notebook, a web-based computing platform, to code and generate a total of 9 charts to compete under the data visualization category of this competition. This repository contains my finalized codes for a total of 8 charts shown in the poster below:
+# Decoding Happiness With Python
+I have used Jupyter Notebook, a web-based computing platform, to code and generate a total of 9 charts to compete under the data visualization category of this competition. This repository contains my finalized codes for a total of 8 charts shown in the poster below. 
 
 ![Anaconda Research Poster (1)](https://github.com/risingcupcakes/Anaconda-Data-Science-Expo-2023/assets/75836749/673ae96b-2381-4e04-bc3a-505c56f4ee4e)
+
+# Contributors 
+* Reina Peh [LinkedIn](https://www.linkedin.com/in/reinapeh/)  
+* Ryan Tan [LinkedIn](https://www.linkedin.com/in/ryantzr/)  
+* Claudia Lai [LinkedIn](https://www.linkedin.com/in/claudialaijy/)  
 
 # Datasets
 Refer to the `Datasets` folder to download the following datasets:
@@ -34,9 +38,9 @@ This will install the following libraries along with their dependencies:
 `Kaleido`: For static image export support with Plotly  
 `Geopandas`: An open-source project that makes working with geospatial data in python easier  
 
-# Challenges
+# Challenges We Faced
 ### 1. Creation of a links structure
-The primary technical challenge in generating the Sankey diagram was creating a structured list of dictionaries that define links between nodes. 
+The primary technical challenge in generating the Sankey diagram was creating a DataFrame that can then be extracted  used to illustrate the migrant flows between countries structured list of dictionaries that define links between nodes. 
 
 #### Approach:
 ```
@@ -72,8 +76,5 @@ for theta_val, (country, score) in zip(theta_with_10_degree_gap, data_sorted[['c
 ```
 The code first determines the text content's sequence `text_content` based on the angular position `theta_val` of the data point. For data points in the right hemisphere (0 to π/2 and 3π/2 to 2π radians), the text is formatted as `<score> <country>`. For points in the left hemisphere (π/2 to 3π/2 radians), it's `<country> <score>`. Depending on whether the data point is in the left or right hemisphere, the horizontal alignment `ha` is set to "right" or "left", respectively. This ensures that the text is aligned in a way that it's always outward-facing from the center of the plot, enhancing readability (vertical alignment `va` is consistently set to "center"). The rotation of the text `rotation_deg` is calculated based on `theta_val`, with an adjustment of - 180 degrees when the point is in the left hemisphere. This rotation aligns the text with the radial lines of the plot, ensuring that the text orientation is consistent with the direction of the data points.
 
-# Contributors 
-* Reina Peh [LinkedIn](https://www.linkedin.com/in/reinapeh/)
-* Ryan Tan [LinkedIn](https://www.linkedin.com/in/ryantzr/)
-* Claudia Lai [LinkedIn](https://www.linkedin.com/in/claudialaijy/)
+
 
