@@ -1,4 +1,5 @@
 # Anaconda Data Science Expo 2023
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 > **Achievement 🏆 :**  
 > 1st Place Overall & $7,000 USD
 
