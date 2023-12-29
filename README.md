@@ -1,7 +1,8 @@
 # Anaconda Data Science Expo 2023
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![forthebadge made-with-python]([![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/))](https://www.python.org/)
-[![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/try)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![Python](https://img.shields.io/badge/Python-3.8.10-green)
+![IDE](https://img.shields.io/badge/IDE-Jupyter%20Notebook-orange)
+
 > **Achievement 🏆 :**  
 > 1st Place Overall & $7,000 USD
 
