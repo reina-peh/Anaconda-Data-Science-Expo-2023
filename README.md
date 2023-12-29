@@ -1,5 +1,5 @@
 # Anaconda Data Science Expo 2023
-> **Achievement:**  
+> **Achievement 🏆 :**  
 > 1st Place Overall & $7,000 USD
 
 This competition was organized by Anaconda, the world's most popular data science platform. It was held at National University of Singapore (NUS), where both [Anaconda](https://www.anaconda.com/) from the United States and [AI Singapore](https://aisingapore.org/) jointly carried out 2 rounds of judging. 
