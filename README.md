@@ -1,8 +1,8 @@
-# Anaconda Data Science Expo 2023
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Python](https://img.shields.io/badge/Python-3.8.10-green)
 ![IDE](https://img.shields.io/badge/IDE-Jupyter%20Notebook-orange)
 
+# Anaconda Data Science Expo 2023
 > **Achievement 🏆 :**  
 > 1st Place Overall & $7,000 USD
 
