@@ -8,10 +8,9 @@ This competition was organized by Anaconda, the world's most popular data scienc
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Python](https://img.shields.io/badge/Python-3.8.10-green)
 ![IDE](https://img.shields.io/badge/IDE-Jupyter%20Notebook-orange)
-
-I have used Jupyter Notebook, a web-based computing platform, to code and generate a total of 9 charts to compete under the data visualization category of this competition. This repository contains my finalized codes for a total of 8 charts shown in the poster below. 
-
 ![Anaconda Research Poster (1)](https://github.com/risingcupcakes/Anaconda-Data-Science-Expo-2023/assets/75836749/673ae96b-2381-4e04-bc3a-505c56f4ee4e)
+
+The exploration of the happiness topic stems from a profound curiosity to decode the intricate factors that contribute to our overall well-being and contentment. In our quest to understand this complex emotion and universal pursuit, we analyzed 5 datasets and visualized regional-level insights about happiness, where each of the 8 charts offers a unique perspective. We then weaved our insights into a visual narrative in the poster, which showcases the multifaceted nature of happiness through data-driven storytelling. 
 
 # Contributors 
 * Reina Peh [LinkedIn](https://www.linkedin.com/in/reinapeh/)  
