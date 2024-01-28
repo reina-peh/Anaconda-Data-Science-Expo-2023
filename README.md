@@ -47,11 +47,9 @@ The `go.Sankey` function consists of 2 parameters `node (dict)` and `link (dict)
 
 #### Approach:
 ```
-# Extract the matrix data
 matrix_inc = df_inc.iloc[:, 1:].values.tolist()
 names_inc = df_inc.columns[1:].tolist()
 
-# Construct the links DataFrame using list comprehension
 data_inc = [{'source': names_inc.index(name), 'target': names_inc.index(target_name), 'value': matrix_inc[i][j]} 
             for i, name in enumerate(names_inc) 
             for j, target_name in enumerate(names_inc) if matrix_inc[i][j] > 0]
@@ -62,8 +60,7 @@ We achieved the desired format by using a list comprehension to iterate over our
 In developing the polar histogram, we encountered with challenges with positioning the country names and scores as such: `<score> <country>` for the right hemisphere and `<country> <score>` for the left hemisphere of the plot, while also aligning and rotating with the positions of the data points. 
 
 #### Approach:
-```
-# Conditional logic 
+``` 
 for theta_val, (country, score) in zip(theta_with_10_degree_gap, data_sorted[['country', 'score']].values):
     alignment = {}
     if 0 <= theta_val <= np.pi/2 or 3*np.pi/2 <= theta_val <= 2*np.pi:
