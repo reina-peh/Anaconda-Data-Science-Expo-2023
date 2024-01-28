@@ -4,14 +4,12 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
-# Load data
 data = pd.read_csv("C:/Users/reina/Documents/Downloads/hapiness_report_2022.csv")
 data = data.dropna(subset=['income'])
 
-# Sort data by the happiness scores
 data_sorted = data.sort_values(by='score', ascending=False).reset_index(drop=True)
 
-# Adjust the theta values for the gap
+# Adjust theta values for the gap
 n_points = len(data_sorted)
 gap_radians = np.radians(10)
 index_afghanistan = data_sorted.index[data_sorted['country'] == 'Afghanistan'][0]
@@ -22,7 +20,6 @@ theta_with_10_degree_gap = np.array(
     [theta if (i < index_finland or i > index_afghanistan) else theta + gap_radians for i, theta in enumerate(theta_reduced_width)]
 )
 
-# Adjust color mapping
 color_map_happiness = {
     'Low income': '#C26DBC',
     'Lower middle income': '#EEB5EB',
@@ -30,8 +27,7 @@ color_map_happiness = {
     'High income': '#3CACAE'
 }
 colors_sorted_happiness = data_sorted['income'].map(color_map_happiness).tolist()
-
-# Load flags and resize them
+ 
 flags = {
     'Finland': Image.open("C:/Users/reina/Documents/Downloads/Rounded Country Flag_Complete/finland.png"),
     'Denmark': Image.open("C:/Users/reina/Documents/Downloads/Rounded Country Flag_Complete/denmark.png"),
@@ -193,11 +189,11 @@ bars = ax.bar(theta_with_10_degree_gap, data_sorted['score'].values, width=reduc
 # Hide boundary
 ax.spines['polar'].set_visible(False)
 
-# Change radial gridlines to white
+# Make radial gridlines white
 ax.yaxis.grid(color='white')
 
-# Add labels to happiness scores on radial gridlines with reduced frequency
-label_frequency = 1  # Adjust the frequency as needed
+# Add labels to happiness scores on radial gridlines
+label_frequency = 1 
 max_score = max(data_sorted['score'])
 for score in np.arange(0, max_score + label_frequency, label_frequency):
     radial_distance = score
@@ -239,7 +235,6 @@ for text in legend.get_texts():
 ax.set_yticklabels([])
 ax.set_xticks([])
 
-# Save as SVG with transparent background
 fig.savefig("C:/Users/reina/Documents/Downloads/polarhisto2.svg", transparent=True, bbox_inches='tight', pad_inches=0.1)
 
 plt.show()
