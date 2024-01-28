@@ -181,25 +181,20 @@ flag_width = 50
 for country in flags:
     flags[country] = resize_image(flags[country], flag_width)
 
-# Plot
 fig, ax = plt.subplots(subplot_kw={'projection': 'polar'}, figsize=(12, 12))
 bars = ax.bar(theta_with_10_degree_gap, data_sorted['score'].values, width=reduced_width, 
               color=colors_sorted_happiness, edgecolor='white', linewidth=1.5)
 
-# Hide boundary
 ax.spines['polar'].set_visible(False)
-
-# Make radial gridlines white
 ax.yaxis.grid(color='white')
 
-# Add labels to happiness scores on radial gridlines
+# Labels 
 label_frequency = 1 
 max_score = max(data_sorted['score'])
 for score in np.arange(0, max_score + label_frequency, label_frequency):
     radial_distance = score
     ax.text(0, radial_distance, f'{score:.1f}', color='orange', fontsize=7, ha='center', va='center')
 
-# Add country names, guide lines, and flags
 for theta_val, (country, score) in zip(theta_with_10_degree_gap, data_sorted[['country', 'score']].values):
     alignment = {}
     if 0 <= theta_val <= np.pi/2 or 3*np.pi/2 <= theta_val <= 2*np.pi:
