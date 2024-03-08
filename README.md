@@ -2,14 +2,14 @@
 > **Achievement 🏆 :**  
 > 1st Place Overall & $7,000 USD
 
-This competition was organized by Anaconda, the world's most popular data science platform. It was held at National University of Singapore (NUS), where both [Anaconda](https://www.anaconda.com/) from the United States and [AI Singapore](https://aisingapore.org/) jointly carried out 2 rounds of judging. 
+This competition was organized by Anaconda, the world's most popular data science platform. It was held in Singapore, at the National University of Singapore (NUS), where both [Anaconda](https://www.anaconda.com/) from the United States and [AI Singapore](https://aisingapore.org/) jointly carried out 2 rounds of judging. 
 
 # Decoding Happiness With Python
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Python](https://img.shields.io/badge/Python-3.8.10-green)
 ![IDE](https://img.shields.io/badge/IDE-Jupyter%20Notebook-orange)
 ![Anaconda Research Poster (4)](https://github.com/reina-peh/Anaconda-Data-Science-Expo-2023/assets/75836749/feec8f96-585e-4eed-a0cd-ca3c6184f6af)  
-The exploration of the happiness topic stems from a profound curiosity to decode the intricate factors that contribute to our overall well-being and contentment. In our quest to understand this complex emotion and universal pursuit, we analyzed 5 datasets and visualized regional-level insights about happiness using Python, where each of the 8 static and interactive charts (polar histogram, choropleth map, histogram with kde, radar chart, boxplot, sankey diagram, bar chart and scatterplot) offers a unique perspective. We then weaved these insights into a visual narrative (see poster) that tells its data-driven story about happiness! 🌻  
+The exploration of the happiness topic stems from a profound curiosity to decode the intricate factors that contribute to our overall well-being and contentment. In our quest to understand this complex emotion and universal pursuit, we analyzed 5 datasets and visualized regional-level insights about happiness by coding 8 static and interactive charts using Python. We then weaved our charts and insights into a visual narrative (see poster) which tells its data-driven story about happiness! 🌻  
 
 # Contributors 
 * Reina Peh ([LinkedIn](https://www.linkedin.com/in/reinapeh/))  
@@ -39,6 +39,16 @@ This will install the following libraries along with their dependencies:
 `Plotly`: An interactive graphing library for Python  
 `Kaleido`: For static image export support with Plotly  
 `Geopandas`: An open-source project that makes working with geospatial data in python easier  
+
+# Charts 
+* Polar Histogram
+* Choropleth Map
+* Histogram with KDE
+* Radar Chart
+* Boxplot
+* Sankey Diagram
+* Bar Chart
+* Scatterplot
 
 # Challenges We Faced
 ### 1. Creation of a links structure
