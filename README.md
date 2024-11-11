@@ -12,9 +12,9 @@ This competition was organized by Anaconda, the world's most popular data scienc
 The exploration of the happiness topic stems from a profound curiosity to decode the intricate factors that contribute to our overall well-being and contentment. In our quest to understand this complex emotion and universal pursuit, we analyzed 5 datasets and visualized regional-level insights about happiness by coding 8 static and interactive charts using Python. We then weaved our charts and insights into a visual narrative (see poster) which tells its data-driven story about happiness! 🌻  
 
 # Contributors 
-* Reina Peh ([LinkedIn](https://www.linkedin.com/in/reinapeh/))  
-* Ryan Tan ([LinkedIn](https://www.linkedin.com/in/ryantzr/))  
-* Claudia Lai ([LinkedIn](https://www.linkedin.com/in/claudialaijy/))  
+* Reina Peh 
+* Ryan Tan 
+* Claudia Lai 
 
 # Datasets
 Refer to the `Datasets` folder to download the following datasets:
