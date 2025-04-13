@@ -9,12 +9,7 @@ This competition was organized by Anaconda, the world's most popular data scienc
 ![Python](https://img.shields.io/badge/Python-3.8.10-green)
 ![IDE](https://img.shields.io/badge/IDE-Jupyter%20Notebook-orange)
 ![Anaconda Research Poster (4)](https://github.com/reina-peh/Anaconda-Data-Science-Expo-2023/assets/75836749/feec8f96-585e-4eed-a0cd-ca3c6184f6af)  
-The exploration of the happiness topic stems from a profound curiosity to decode the intricate factors that contribute to our overall well-being and contentment. In our quest to understand this complex emotion and universal pursuit, we analyzed 5 datasets and visualized regional-level insights about happiness by coding 8 static and interactive charts using Python. We then weaved our charts and insights into a visual narrative (see poster) which tells its data-driven story about happiness! 🌻  
-
-# Contributors 
-* Reina Peh 
-* Ryan Tan 
-* Claudia Lai 
+The exploration of the happiness topic stems from a profound curiosity to decode the intricate factors that contribute to our overall well-being and contentment. In our quest to understand this complex emotion and universal pursuit, we analyzed 5 datasets and visualized regional-level insights about happiness by coding 8 static and interactive charts using Python. We then weaved our charts and insights into a visual narrative (see poster) which tells its data-driven story about happiness! 🌻   
 
 # Datasets
 Refer to the `Datasets` folder to download the following datasets:
